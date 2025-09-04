@@ -1,0 +1,33 @@
+# Galaxy Pair Selection Configuration
+
+# Selection criteria parameters
+selection_criteria:
+  max_separation_kpc: 50          # Maximum projected separation in kpc
+  mass_tolerance_dex: 0.3         # Stellar mass similarity tolerance in dex
+  max_velocity_diff_kms: 300      # Maximum velocity difference in km/s
+  min_effective_radii: 2          # Minimum R_eff coverage in NIRSpec FoV
+  
+# Sample sizes
+sample_sizes:
+  n_pairs: 10                     # Number of galaxy pairs to select
+  n_control: 10                   # Number of control galaxies to select
+
+# NIRSpec instrument parameters
+nirspec:
+  ifu_fov_arcsec: 3.0            # IFU field of view in arcseconds
+  wavelength_range:
+    min_micron: 0.97             # Minimum wavelength
+    max_micron: 5.27             # Maximum wavelength
+  
+# Halpha line parameters
+halpha:
+  rest_wavelength_angstrom: 6562.8  # Rest wavelength of Halpha
+  observable_redshift_range:
+    min_z: 0.48                   # Minimum redshift for Halpha observation
+    max_z: 7.0                    # Maximum redshift for Halpha observation
+
+# Cosmology parameters (Planck 2018)
+cosmology:
+  H0: 67.4                       # Hubble constant
+  Om0: 0.315                     # Matter density parameter
+  Ode0: 0.685                    # Dark energy density parameter
